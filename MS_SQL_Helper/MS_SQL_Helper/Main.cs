@@ -63,10 +63,10 @@ namespace MS_SQL_Helper
 
         void CustomizeDesign()
         {
-            panelLogo.Visible = false;
             panelMenu.Visible = false;
             panelCodeFirst.Visible = false;
             panelEditing.Visible = false;
+            panelAuthor.Visible = false;
 
             /* Подгон высоты каждой панели под кол-во кнопок */
             int btnHeight = 50;
@@ -74,6 +74,7 @@ namespace MS_SQL_Helper
             panelMenu.Height = panelMenu.Controls.Count * btnHeight;
             panelCodeFirst.Height = panelCodeFirst.Controls.Count * btnHeight;
             panelEditing.Height = panelEditing.Controls.Count * btnHeight;
+            panelAuthor.Height = panelAuthor.Controls.Count * btnHeight;
         }
 
         void HideSubMenu()
@@ -86,6 +87,9 @@ namespace MS_SQL_Helper
 
             if (panelEditing.Visible)
                 panelEditing.Visible = false;
+
+            if (panelAuthor.Visible)
+                panelAuthor.Visible = false;
         }
 
         void ShowSubMenu(Panel panel)
@@ -191,6 +195,11 @@ namespace MS_SQL_Helper
             ShowSubMenu(panelEditing);
         }
 
+        private void btnAuthor_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelAuthor);
+        }
+
         private void btnCreateTable_Click(object sender, EventArgs e)
         {
             OpenChildFormInPanel(new CreateTable());
@@ -214,6 +223,11 @@ namespace MS_SQL_Helper
             OpenChildFormInPanel(new CreateTableFC());
             HideSubMenu();
         }
+
+        private void btnGit_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Diman14610/Examples_CSharp");
+        }
         #endregion
 
         private void Form1_Load(object sender, EventArgs e)
@@ -222,7 +236,5 @@ namespace MS_SQL_Helper
             System.IO.Directory.CreateDirectory("Resource/Tables");
             System.IO.Directory.CreateDirectory("Resource/Scripts");
         }
-
-
     }
 }

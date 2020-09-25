@@ -33,6 +33,9 @@
             this.panelRigth = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panelAuthor = new System.Windows.Forms.Panel();
+            this.btnGit = new System.Windows.Forms.Button();
+            this.btnAuthor = new System.Windows.Forms.Button();
             this.panelEditing = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.btnJSONAdd = new System.Windows.Forms.Button();
@@ -46,8 +49,6 @@
             this.btnRelationship = new System.Windows.Forms.Button();
             this.btnCreateTable = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTab = new System.Windows.Forms.Panel();
             this.btnCollapse = new System.Windows.Forms.Button();
             this.btnFullResize = new System.Windows.Forms.Button();
@@ -58,11 +59,10 @@
             this.panelRigth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSideMenu.SuspendLayout();
+            this.panelAuthor.SuspendLayout();
             this.panelEditing.SuspendLayout();
             this.panelCodeFirst.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -105,18 +105,61 @@
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.panelSideMenu.Controls.Add(this.panelAuthor);
+            this.panelSideMenu.Controls.Add(this.btnAuthor);
             this.panelSideMenu.Controls.Add(this.panelEditing);
             this.panelSideMenu.Controls.Add(this.btnEditing);
             this.panelSideMenu.Controls.Add(this.panelCodeFirst);
             this.panelSideMenu.Controls.Add(this.btnCodeFirst);
             this.panelSideMenu.Controls.Add(this.panelMenu);
             this.panelSideMenu.Controls.Add(this.btnMenu);
-            this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 32);
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(200, 758);
             this.panelSideMenu.TabIndex = 3;
+            // 
+            // panelAuthor
+            // 
+            this.panelAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(59)))), ((int)(((byte)(84)))));
+            this.panelAuthor.Controls.Add(this.btnGit);
+            this.panelAuthor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAuthor.Location = new System.Drawing.Point(0, 592);
+            this.panelAuthor.Name = "panelAuthor";
+            this.panelAuthor.Size = new System.Drawing.Size(200, 71);
+            this.panelAuthor.TabIndex = 10;
+            // 
+            // btnGit
+            // 
+            this.btnGit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGit.FlatAppearance.BorderSize = 0;
+            this.btnGit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(220)))), ((int)(((byte)(226)))));
+            this.btnGit.Location = new System.Drawing.Point(0, 0);
+            this.btnGit.Name = "btnGit";
+            this.btnGit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnGit.Size = new System.Drawing.Size(200, 50);
+            this.btnGit.TabIndex = 1;
+            this.btnGit.Text = "Git";
+            this.btnGit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGit.UseVisualStyleBackColor = true;
+            this.btnGit.Click += new System.EventHandler(this.btnGit_Click);
+            // 
+            // btnAuthor
+            // 
+            this.btnAuthor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAuthor.FlatAppearance.BorderSize = 0;
+            this.btnAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(76)))));
+            this.btnAuthor.Location = new System.Drawing.Point(0, 542);
+            this.btnAuthor.Name = "btnAuthor";
+            this.btnAuthor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAuthor.Size = new System.Drawing.Size(200, 50);
+            this.btnAuthor.TabIndex = 9;
+            this.btnAuthor.Text = "Автор";
+            this.btnAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuthor.UseVisualStyleBackColor = true;
+            this.btnAuthor.Click += new System.EventHandler(this.btnAuthor_Click);
             // 
             // panelEditing
             // 
@@ -124,7 +167,7 @@
             this.panelEditing.Controls.Add(this.button7);
             this.panelEditing.Controls.Add(this.btnJSONAdd);
             this.panelEditing.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEditing.Location = new System.Drawing.Point(0, 554);
+            this.panelEditing.Location = new System.Drawing.Point(0, 426);
             this.panelEditing.Name = "panelEditing";
             this.panelEditing.Size = new System.Drawing.Size(200, 116);
             this.panelEditing.TabIndex = 8;
@@ -166,7 +209,7 @@
             this.btnEditing.FlatAppearance.BorderSize = 0;
             this.btnEditing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(76)))));
-            this.btnEditing.Location = new System.Drawing.Point(0, 504);
+            this.btnEditing.Location = new System.Drawing.Point(0, 376);
             this.btnEditing.Name = "btnEditing";
             this.btnEditing.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEditing.Size = new System.Drawing.Size(200, 50);
@@ -182,7 +225,7 @@
             this.panelCodeFirst.Controls.Add(this.button1);
             this.panelCodeFirst.Controls.Add(this.btnCreateTableCF);
             this.panelCodeFirst.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCodeFirst.Location = new System.Drawing.Point(0, 389);
+            this.panelCodeFirst.Location = new System.Drawing.Point(0, 261);
             this.panelCodeFirst.Name = "panelCodeFirst";
             this.panelCodeFirst.Size = new System.Drawing.Size(200, 115);
             this.panelCodeFirst.TabIndex = 6;
@@ -224,7 +267,7 @@
             this.btnCodeFirst.FlatAppearance.BorderSize = 0;
             this.btnCodeFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCodeFirst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(76)))));
-            this.btnCodeFirst.Location = new System.Drawing.Point(0, 339);
+            this.btnCodeFirst.Location = new System.Drawing.Point(0, 211);
             this.btnCodeFirst.Name = "btnCodeFirst";
             this.btnCodeFirst.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCodeFirst.Size = new System.Drawing.Size(200, 50);
@@ -241,7 +284,7 @@
             this.panelMenu.Controls.Add(this.btnRelationship);
             this.panelMenu.Controls.Add(this.btnCreateTable);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenu.Location = new System.Drawing.Point(0, 178);
+            this.panelMenu.Location = new System.Drawing.Point(0, 50);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 161);
             this.panelMenu.TabIndex = 2;
@@ -299,7 +342,7 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(76)))));
-            this.btnMenu.Location = new System.Drawing.Point(0, 128);
+            this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMenu.Size = new System.Drawing.Size(200, 50);
@@ -308,26 +351,6 @@
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 128);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::MS_SQL_Helper.Properties.Resources.wqeefgn;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panelTab
             // 
@@ -435,11 +458,10 @@
             this.panelRigth.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelSideMenu.ResumeLayout(false);
+            this.panelAuthor.ResumeLayout(false);
             this.panelEditing.ResumeLayout(false);
             this.panelCodeFirst.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -456,11 +478,9 @@
         private System.Windows.Forms.Button btnRelationship;
         private System.Windows.Forms.Button btnCreateTable;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTab;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnFull;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnFullResize;
         private System.Windows.Forms.Button btnCollapse;
@@ -473,6 +493,9 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnJSONAdd;
         private System.Windows.Forms.Button btnEditing;
+        private System.Windows.Forms.Panel panelAuthor;
+        private System.Windows.Forms.Button btnGit;
+        private System.Windows.Forms.Button btnAuthor;
     }
 }
 
